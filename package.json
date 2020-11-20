@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/alebasicunha/clean-architecture-project/issues"
   },
-  "homepage": "https://github.com/alebasicunha/clean-architecture-project#readme"
+  "homepage": "https://github.com/alebasicunha/clean-architecture-project#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.0.0"
+  }
 }
