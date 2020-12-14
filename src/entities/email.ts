@@ -18,6 +18,13 @@ export class Email {
     if (domain.length > 255 || domain.length === 0) {
       return false
     }
+    // nenhuma das subparts do domain pode ser maior que 63 chars
+    const domainParts = domain.split('.')
+    if (domainParts.some(function (part) {
+      return part.length > 63
+    })) {
+      return false
+    }
     return true
   }
 }
