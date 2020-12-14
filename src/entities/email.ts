@@ -1,5 +1,5 @@
 export class Email {
-  // estrutura do email: local-part@domain
+  // estrutura de um email valido: local-part@domain
   static validate (email : string): boolean {
     // email nao pode ser nulo nem vazio
     if (!email) {
@@ -9,9 +9,9 @@ export class Email {
     if (email.length > 320) {
       return false
     }
-    // local part não pode ser maior que 64 char
+    // local part não pode ser maior que 64 char nem vazio
     const [local, domain] = email.split('@')
-    if (local.length > 64) {
+    if (local.length > 64 || local.length === 0) {
       return false
     }
     // domain part não pode ser mairo que 255
