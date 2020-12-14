@@ -15,7 +15,7 @@ export class Email {
       return false
     }
     // domain part não pode ser mairo que 255
-    if (domain.length > 255) {
+    if (domain.length > 255 || domain.length === 0) {
       return false
     }
     return true
