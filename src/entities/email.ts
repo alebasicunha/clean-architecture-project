@@ -10,8 +10,12 @@ export class Email {
       return false
     }
     // local part não pode ser maior que 64 char
-    const [local] = email.split('@')
+    const [local, domain] = email.split('@')
     if (local.length > 64) {
+      return false
+    }
+    // domain part não pode ser mairo que 255
+    if (domain.length > 255) {
       return false
     }
     return true
