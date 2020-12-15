@@ -12,7 +12,7 @@ export class Email {
 
     // regular expression for valid chars
     const emailRegex =
-      /^[-!#$%'*-9=?Z^_a-z`{|}~](\.?[-!#$%'*-9=?Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/
+      /^[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/
 
     if (!emailRegex.test(email)) {
       return false
