@@ -9,6 +9,15 @@ export class Email {
     if (email.length > 320) {
       return false
     }
+
+    // regular expression for valid chars
+    const emailRegex =
+      /^[-!#$%'*-9=?Z^_a-z`{|}~](\.?[-!#$%'*-9=?Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/
+
+    if (!emailRegex.test(email)) {
+      return false
+    }
+
     // local part não pode ser maior que 64 char nem vazio
     const [local, domain] = email.split('@')
     if (local.length > 64 || local.length === 0) {
