@@ -1,4 +1,23 @@
+import { Either, left, right } from '../shared/either'
+import { InvalidEmailError } from './errors/invalid-email-error'
+
 export class Email {
+  private readonly email: string
+
+  constructor (email: string) {
+    this.email = email
+  }
+
+  // factory method to create an email if it's valid or return error
+  static create (email: string): Either<InvalidEmailError, Email> {
+    if (Email.validate(email)) {
+      return right(new Email(email))
+    }
+
+    return left(new InvalidEmailError())
+  }
+
+  // metodo para validar emails
   // estrutura de um email valido: local-part@domain
   static validate (email : string): boolean {
     // email nao pode ser nulo nem vazio
