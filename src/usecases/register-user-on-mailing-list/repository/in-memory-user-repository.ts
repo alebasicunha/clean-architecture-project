@@ -1,6 +1,7 @@
 import { UserRepository } from '../ports/user-repository'
 import { UserData } from '../../../entities/user-data'
 
+// Fake object of the memory repository
 export class InMemoryUserRepository implements UserRepository {
   private repository: UserData[]
 
