@@ -1,6 +1,6 @@
 {
     "*.ts": [
         "eslint --fix",
-        "npm run test:staged --passWithnoTests"
+        "npm run test-staged --passWithnoTests"
     ]
 }
