@@ -1,4 +1,4 @@
-import { UserData } from '../../../entities/user-data'
+import { UserData } from '../../../entities'
 
 // Interface to save list of users. InMemoryUserRepository implements this interface
 export interface UserRepository {

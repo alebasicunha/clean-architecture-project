@@ -1,9 +1,7 @@
-import { InvalidEmailError } from '../../entities/errors/invalid-email-error'
-import { InvalidNameError } from '../../entities/errors/invalid-name-error'
-import { User } from '../../entities/user'
-import { UserData } from '../../entities/user-data'
-import { Either, left, right } from '../../shared/either'
-import { UserRepository } from './ports/user-repository'
+import { UserRepository } from './ports'
+import { User, UserData } from '../../entities'
+import { Either, left, right } from '../../shared'
+import { InvalidNameError, InvalidEmailError } from '../../entities/errors'
 
 export class RegisterUserOnMailingList {
   // Use case: create user and add to repository (FakeObject: InMemoryUserRepository)
